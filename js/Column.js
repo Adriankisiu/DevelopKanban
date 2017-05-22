@@ -6,14 +6,14 @@ function Column(id, name) {
 	this.element = createColumn();
 
 	function createColumn() {
-		// TWORZENIE NOWYCH WĘZŁÓW
+		// creatin new node
 		var column = $('<div class="column"></div>');
 		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
 		var columnCardList = $('<ul class="card-list"></ul>');
 		var columnDelete = $('<button class="btn-delete">x</button>');
 		var columnAddCard = $('<button class="column-add-card">Dodaj kartę</button>');
 		
-		// PODPINANIE ODPOWIEDNICH ZDARZEŃ POD WĘZŁY
+		// significant relevants to the nodes 
 		columnDelete.click(function() {
 			self.deleteColumn();
 		});
@@ -35,7 +35,7 @@ function Column(id, name) {
     	  });
 		});
 			
-			// KONSTRUOWANIE ELEMENTU KOLUMNY
+			// create the column element
 		column.append(columnTitle)
 			.append(columnDelete)
 			.append(columnAddCard)
