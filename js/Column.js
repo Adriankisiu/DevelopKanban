@@ -28,8 +28,8 @@ function Column(id, name) {
               name: cardName,
     		  bootcamp_kanban_column_id: self.id
         	},
-        	success: function() {
-              var card = new card(response.id, cardName);
+        	success: function(response) {
+              var card = new Card(response.id, cardName);
         	  self.createCard(card);
        		}
     	  });
